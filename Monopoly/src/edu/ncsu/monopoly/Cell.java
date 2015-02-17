@@ -3,14 +3,14 @@ package edu.ncsu.monopoly;
 public abstract class Cell {
 	private boolean available = true;
 	private String name;
-	protected Player owner;
+	protected Player theOwner;
 
 	public String getName() {
 		return name;
 	}
 
-	public Player getOwner() {
-		return owner;
+	public Player getTheOwner() {
+		return theOwner;
 	}
 	
 	
@@ -32,8 +32,8 @@ public abstract class Cell {
 		this.name = name;
 	}
 
-	public void setOwner(Player theOwner) {
-		this.owner = theOwner;
+	public void setTheOwner(Player theOwner) {
+		this.theOwner = theOwner;
 	}
     
     public String toString() {
