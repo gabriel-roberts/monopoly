@@ -26,10 +26,12 @@ public class GainMoneyCardTest extends TestCase {
     
     public void testGainMoneyCardUI() {
         gameMaster.movePlayer(0, 1);
-        assertTrue(gameMaster.getGUI().isDrawCardButtonEnabled());
-        assertFalse(gameMaster.getGUI().isEndTurnButtonEnabled());
+        boolean drawCardButtonEnabled = gameMaster.getGUI().isDrawCardButtonEnabled();
+        boolean endTurnButtonEnabled = gameMaster.getGUI().isEndTurnButtonEnabled();
+		assertTrue(drawCardButtonEnabled);
+		assertFalse(endTurnButtonEnabled);
         gameMaster.btnDrawCardClicked();
-        assertFalse(gameMaster.getGUI().isDrawCardButtonEnabled());
-		assertTrue(gameMaster.getGUI().isEndTurnButtonEnabled());
+        assertFalse(drawCardButtonEnabled);
+		assertTrue(endTurnButtonEnabled);
     }
 }
