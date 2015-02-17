@@ -30,13 +30,15 @@ public class MovePlayerCardTest extends TestCase {
     
     public void testMovePlayerCardUI() {
         gameMaster.movePlayer(0, 2);
-        assertTrue(gameMaster.getGUI().isDrawCardButtonEnabled());
-        assertFalse(gameMaster.getGUI().isEndTurnButtonEnabled());
+        boolean drawCardButtonEnabled = gameMaster.getGUI().isDrawCardButtonEnabled();
+		assertTrue(drawCardButtonEnabled);
+        boolean endTurnButtonEnabled = gameMaster.getGUI().isEndTurnButtonEnabled();
+		assertFalse(endTurnButtonEnabled);
         gameMaster.btnDrawCardClicked();
-        assertFalse(gameMaster.getGUI().isDrawCardButtonEnabled());
+        assertFalse(drawCardButtonEnabled);
 		IOwnable cell = gameMaster.getCurrentPlayer().getPosition();
 		assertEquals(gameMaster.getGameBoard().queryCell("Blue 1"), cell);
-		assertTrue(gameMaster.getGUI().isEndTurnButtonEnabled());
+		assertTrue(endTurnButtonEnabled);
 		assertEquals(1700, gameMaster.getCurrentPlayer().getMoney());
     }
 }
