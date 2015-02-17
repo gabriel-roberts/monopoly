@@ -1,6 +1,6 @@
 package edu.ncsu.monopoly;
 
-public abstract class Cell {
+public abstract class Cell implements IOwnable {
 	private String name;
 	protected Player theOwner;
 	private boolean available = true;
@@ -9,6 +9,10 @@ public abstract class Cell {
 		return name;
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.ncsu.monopoly.IOwnable#getTheOwner()
+	 */
+	@Override
 	public Player getTheOwner() {
 		return theOwner;
 	}
@@ -24,6 +28,10 @@ public abstract class Cell {
 		this.name = name;
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.ncsu.monopoly.IOwnable#setTheOwner(edu.ncsu.monopoly.Player)
+	 */
+	@Override
 	public void setTheOwner(Player theOwner) {
 		this.theOwner = theOwner;
 	}
