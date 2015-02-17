@@ -6,7 +6,6 @@ public class PropertyCell extends Cell {
 	private int numHouses;
 	private int rent;
 	private int sellPrice;
-
 	public String getColorGroup() {
 		return colorGroup;
 	}
@@ -66,4 +65,5 @@ public class PropertyCell extends Cell {
 	public void setRent(int rent) {
 		this.rent = rent;
 	}
+
 }
