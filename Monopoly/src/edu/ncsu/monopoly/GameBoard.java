@@ -59,6 +59,11 @@ public class GameBoard {
 	}
 	
 	public PropertyCell[] getPropertiesInMonopoly(String color) {
+		PropertyCell[] monopolyCells = findPropertyInMonopoly(color);
+		return monopolyCells;
+	}
+
+	private PropertyCell[] findPropertyInMonopoly(String color) {
 		PropertyCell[] monopolyCells = 
 			new PropertyCell[getPropertyNumberForColor(color)];
 		int counter = 0;

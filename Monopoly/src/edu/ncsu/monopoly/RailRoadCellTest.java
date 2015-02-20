@@ -40,8 +40,7 @@ public class RailRoadCellTest extends TestCase {
 	}
 
 	public void testRent() {
-		RailRoadCell rr1 =
-			(RailRoadCell) gameMaster.getGameBoard().queryCell("Railroad A");
+		RailRoadCell rr1 = (RailRoadCell) gameMaster.getGameBoard().queryCell("Railroad A");
 		int cellIndex1 = gameMaster.getGameBoard().queryCellIndex("Railroad A");
 		gameMaster.movePlayer(0, cellIndex1);
 		gameMaster.getPlayer(0).purchase();
